@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <html lang="en">
+      <head>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+        <title>students List</title>
+
+      </head>
+<body>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in student_objs %}
+
+    <tr>
+        <td class="text-center">{{i.Name}}</td>
+        <td>{{i.EnrollNo}}</td>
+
+        <td>{{i.Branch}}</td>
+        <td>{{i.Section}}</td>
+
+    </tr>
+
+      {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

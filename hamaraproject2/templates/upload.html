@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="my_file">
+<br>
+
+    <button type="submit">Upload</button>
+
+
+     <a href="{% url 'export_excel' %}" class="btn btn-secondary">Export Excel</a>
+
+    <a href="{% url 'dlt' %}" class="btn btn-secondary">truncate</a>
+
+  </form>
+</body>
+</html>

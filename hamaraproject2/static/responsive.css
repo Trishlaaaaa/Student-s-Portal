@@ -1,0 +1,46 @@
+
+@media only screen and (max-width:1122px){
+    .nav-list{
+        flex-direction: column;
+    }
+    .navbar{
+        flex-direction: column;
+        transition: all 1s ease-out;
+        height: 400px;
+
+    }
+    .right-nav{
+        text-align: center;
+    }
+    #search{
+        width: 100%;
+    }
+    .burger{
+        display: block;
+    }
+    .h-nav{
+        height: 68px;
+    }
+    .v-class{
+        opacity: 0;
+    }
+    .box-main{
+       flex-direction: column-reverse;
+       max-width: 100%;
+    }
+    .firstHalf{
+        height: 50vh;
+    }
+    .section{
+        flex-direction: column-reverse;
+    }
+    .contact{
+        height: 72vh;
+    }
+    .paras{
+       padding: 0 ;
+    }
+    .form{
+        max-width: 100%;
+    }
+}

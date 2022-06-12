@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{%static 'style2.css'%}">
+    <title>Home</title>
+</head>
+<body>
+
+<nav class="nav">
+        <div class="container">
+            <div class="logo">
+
+                <a href="#">Hello {{user.last_name}} {{user.first_name}}</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="logout">Log Out</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section class="home">
+    </section>
+    <div style="height: 100%">
+        <!-- just to make scrolling effect possible -->
+
+    </div>
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+
+        $('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
+
+    </script>
+
+
+
+<!--<nav class="main-menu ">-->
+<!--                      {% if user.is_authenticated %}-->
+<!--                      <li>Hello, {{user.last_name}}</li>-->
+<!--                      <li> <a href="accounts/logout">logout</a> </li>-->
+<!--                      {% else %}-->
+<!--                        <li> <a href="accounts/register">Register</a> </li>-->
+<!--                        <li> <a href="accounts/login">Login</a> </li>-->
+<!--                      {%endif%}-->
+<!--                     </ul>-->
+<!--                   </nav>-->
+
+<!--{% if user.is_authenticated %}-->
+<!--  Hi {{ user.username }}!-->
+<!--  <p><a href="{% url 'logout' %}">Log Out</a></p>-->
+<!--{% else %}-->
+<!--  <p>You are not logged in</p>-->
+<!--  <a href="{% url 'login' %}">Log In</a>-->
+<!--{% endif %}-->
+
+</body>
+</html>
